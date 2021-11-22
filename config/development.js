@@ -17,6 +17,9 @@ const development = {
   plugins: [new ReactRefreshWebpackPlugin()],
   devtool: 'eval-source-map',
   mode: 'development',
+  watchOptions: {
+    ignored: '**/.DS_Store',
+  },
 }
 
 module.exports = { development }
