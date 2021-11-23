@@ -5,5 +5,7 @@ import App from './App'
 it('App render', () => {
   render(<App />)
 
-  expect(screen.queryByText(/hello world/i)).toBeInTheDocument()
+  const images = screen.getAllByRole('img')
+
+  expect(images[0]).toBeInTheDocument()
 })

@@ -7,9 +7,10 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
  */
 const development = {
   devServer: {
-    static: {
-      directory: path.join(__dirname, '../public'),
-    },
+    static: [
+      { directory: path.join(__dirname, '../public') },
+      { directory: path.join(__dirname, '../dist') },
+    ],
     port: 9000,
     open: true,
     hot: true,

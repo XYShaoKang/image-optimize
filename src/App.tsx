@@ -14,7 +14,6 @@ const imageDatas = [
 
 const App: FC = () => (
   <div>
-    Hello World
     {imageDatas.map(src => (
       <Image key={src} src={src} />
     ))}
