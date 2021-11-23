@@ -2,6 +2,9 @@
  * @type {import('webpack').Configuration}
  */
 const production = {
+  output: {
+    publicPath: '/image-optimize/',
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {
