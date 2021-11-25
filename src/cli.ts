@@ -3,16 +3,7 @@ import path from 'path'
 import sizeOf from 'image-size'
 import fs from 'fs'
 
-const imageDatas = [
-  'image/beauty-woman-portrait-face.jpg',
-  'image/cat-young-animal-curious-wildcat.jpg',
-  'image/landscape-mountains-wilderness-panorama.jpg',
-  'image/mill-black-forest-bach-water.jpg',
-  'image/moon-the-fullness-of-sky-mystery.jpg',
-  'image/roses-bouquet-congratulations-arrangement.jpg',
-  'image/stones-rocks-pebbles-tranquil.jpg',
-  'image/summerfield-woman-girl-sunset.jpg',
-]
+import source from './image-source.json'
 
 const widths = [40, 200, 400, 800, 1200, 1600]
 
@@ -46,7 +37,7 @@ async function generaterImage(imagePath: string) {
 }
 
 void (async function run() {
-  for (const imagePath of imageDatas) {
+  for (const imagePath of source) {
     await generaterImage(path.join(root, imagePath))
   }
 })()
