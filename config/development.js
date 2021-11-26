@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const path = require('path')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
 /**
@@ -7,10 +6,6 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
  */
 const development = {
   devServer: {
-    static: [
-      { directory: path.join(__dirname, '../public') },
-      { directory: path.join(__dirname, '../dist') },
-    ],
     port: 9000,
     open: true,
     hot: true,

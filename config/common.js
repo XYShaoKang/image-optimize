@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const GeneraterImagePlugin = require('../src/generaterImagePlugin')
+const imageSources = require('../src/image-source.json')
 
 /**
  * @type {import('webpack').Configuration}
@@ -36,6 +38,10 @@ const common = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../public', 'index.html'),
+    }),
+    new GeneraterImagePlugin({
+      imageSources,
+      publicDir: path.join(__dirname, '../public/'),
     }),
   ],
 }
